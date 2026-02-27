@@ -1,9 +1,3 @@
-Here is a comprehensive, professional `README.md` file tailored for your project. You can copy this directly into your project folder.
-
-I have included sections on **Installation**, **Usage**, **Smart Features** (like the Math/Icon protection), and **Technical Details**.
-
-***
-
 # Edge Font Changer 🎨
 
 **Edge Font Changer** is a lightweight, privacy-focused browser extension that allows you to enforce custom **Google Fonts** on any website.
@@ -104,5 +98,6 @@ Contributions are welcome! If you find a website where the font breaks icons or 
 5.  Open a Pull Request.
 
 ## 📄 License
+
 
 Distributed under the MIT License. See `LICENSE` for more information.
