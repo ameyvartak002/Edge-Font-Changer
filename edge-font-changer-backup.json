@@ -1,0 +1,21 @@
+{
+  "chatgpt.com": {
+    "font": "Google Sans",
+    "selector": "*"
+  },
+  "customUserFonts": [
+    "Google Sans"
+  ],
+  "en.wikipedia.org": {
+    "font": "Inter",
+    "selector": "*"
+  },
+  "www.option-price.com": {
+    "font": "Google Sans",
+    "selector": "*"
+  },
+  "www.yworks.com": {
+    "font": "Anton",
+    "selector": "*"
+  }
+}

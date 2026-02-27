@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Edge Font Changer",
+  "version": "1.0",
+  "description": "Apply Google Fonts to specific websites with persistence and high-res rendering.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Change Font"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

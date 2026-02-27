@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { width: 320px; padding: 15px; font-family: 'Segoe UI', sans-serif; }
+    h3 { margin-top: 0; color: #333; margin-bottom: 10px; }
+    
+    .section { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+    label { font-size: 12px; font-weight: bold; color: #555; display: block; margin-top: 5px; }
+    
+    select, input, button { width: 100%; margin-top: 5px; padding: 8px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 4px; }
+    
+    .btn-primary { background-color: #0078d4; color: white; border: none; font-weight: bold; cursor: pointer; }
+    .btn-primary:hover { background-color: #106ebe; }
+    
+    .btn-secondary { background-color: #f3f2f1; color: #333; border: 1px solid #ccc; cursor: pointer; }
+    .btn-secondary:hover { background-color: #e1dfdd; }
+
+    #resetBtn { background-color: #fff; color: #e81123; border: 1px solid #e81123; margin-top: 5px; cursor: pointer; }
+    
+    /* New Styles for Data Section */
+    .data-row { display: flex; gap: 5px; margin-top: 5px; }
+    .data-btn { flex: 1; font-size: 11px; padding: 5px; cursor: pointer; }
+    
+    .note { font-size: 10px; color: #666; margin-top: 10px; }
+    .msg { font-size: 11px; display: none; margin-top: 2px; }
+  </style>
+</head>
+<body>
+  <h3>Font Changer</h3>
+
+  <!-- 1. Add Font -->
+  <div class="section">
+    <label for="urlInput">Add from Google Fonts URL:</label>
+    <input type="text" id="urlInput" placeholder="Paste URL here...">
+    <div id="urlMsg" class="msg"></div>
+    <button id="addUrlBtn" class="btn-secondary">Add to List</button>
+  </div>
+  
+  <!-- 2. Select Font -->
+  <div class="section">
+    <label for="fontSelect">Choose Font:</label>
+    <select id="fontSelect"></select>
+    
+    <label for="selectorInput">CSS Selector:</label>
+    <input type="text" id="selectorInput" value="*" placeholder="e.g. body, h1">
+  </div>
+
+  <!-- 3. Actions -->
+  <button id="applyBtn" class="btn-primary">Apply & Save</button>
+  <button id="resetBtn">Reset Current Site</button>
+  <p class="note">Settings for: <span id="currentSite">...</span></p>
+
+  <!-- 4. Data Management (NEW) -->
+  <div class="section" style="border-top: 1px solid #eee; margin-top: 15px; padding-top: 10px; border-bottom: none;">
+    <label>Sync / Backup Settings</label>
+    <div class="data-row">
+      <button id="exportBtn" class="data-btn btn-secondary">Export JSON</button>
+      <button id="importBtn" class="data-btn btn-secondary">Import JSON</button>
+    </div>
+    <!-- Hidden input for file upload -->
+    <input type="file" id="fileInput" accept=".json" style="display: none;" />
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
